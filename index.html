@@ -8,9 +8,12 @@
 <body>
     <script>
 
+    // initialise scores
     let playerScore = 0;
     let computerScore = 0;
 
+        
+        // get computer choice randomly
         function getComputerChoice() {
             let strArray = ["Rock", "Paper", "Scissors"];
 
@@ -21,6 +24,7 @@
             return computerChoice;
         }
 
+        // get player choice via prompt
         function getPlayerChoice() {
 
                 let playerChoice = prompt("Rock, Paper, Scissors?");
@@ -29,6 +33,7 @@
             return playerChoice;
         }
 
+        // play a round and update scores 
         function playRound(playerSelection, computerSelection) {
 
             // tie
@@ -68,6 +73,7 @@
   
         }
 
+        // play game of 5 rounds and announce final scores & winner
         function game() {
 
             for (i = 1; i <= 5; i++) {
@@ -96,6 +102,7 @@
         //console.log(playerSelection);
         //console.log(computerSelection);
         //console.log(playRound(playerSelection, computerSelection));
+
         console.log(game())
 
     </script>
