@@ -27,10 +27,28 @@
         // get player choice via prompt
         function getPlayerChoice() {
 
-                let playerChoice = prompt("Rock, Paper, Scissors?");
-                playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
-
-            return playerChoice;
+            while(true) {
+                let playerChoice = prompt("Rock, paper or scissors?").toLowerCase();
+                // input validation
+                switch (playerChoice) {
+                    case "rock":
+                        playerChoice = "rock";
+                        playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+                        return playerChoice;
+                        break;
+                    case "paper":
+                        playerChoice = "paper";
+                        playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+                        return playerChoice;
+                        break;
+                    case "scissors":
+                        playerChoice = "scissors";
+                        playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+                        return playerChoice;
+                        break;
+                    default: alert("Enter rock, paper or scissors");
+                }
+            }
         }
 
         // play a round and update scores 
@@ -70,7 +88,6 @@
                 console.log(`You win! ${playerSelection} beats ${computerSelection}`);
                 playerScore++;
             } 
-  
         }
 
         // play game of 5 rounds and announce final scores & winner
@@ -96,14 +113,8 @@
             }
 
         }
-        
-        //const playerSelection = getPlayerChoice();
-        //const computerSelection = getComputerChoice();
-        //console.log(playerSelection);
-        //console.log(computerSelection);
-        //console.log(playRound(playerSelection, computerSelection));
 
-        console.log(game())
+        game();
 
     </script>
 </body>
