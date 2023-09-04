@@ -5,20 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../odin-rps/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
 <body>
-    <h1>Score</h1>
-        <p id="playerScore">Player: 0</p>
-        <p id="computerScore">Computer: 0</p>
+    <div class="window">
+        <div class="header"><h1>CAT FIGHT</h1>
+        <p>who collects 5 points wins!</p></div>
 
-    <button id="Rock">Rock</button>
-    <button id="Paper">Paper</button>
-    <button id="Scissors">Scissors</button>
+        <div class="container_players">
+            <div class="player">
+                <p><img src="../odin-rps/img/cat1.png" width="70px"></p>
+                <p id="playerScore">Player: 0</p>
+                <p id="playerChoice"></p>
+            </div>
+            <div class="player">
+                <p><img src="../odin-rps/img/cat2.png" width="70px"></p>
+                <p id="computerScore">Computer: 0</p>
+                <p id="computerChoice"></p>
+            </div>
+        </div>
 
-    <p id="choices"></p>
+        <div id="result"></div>
 
-    <div id="result"></div>
-    
+        <div class="buttons">
+
+            <button id="Rock">ROCK</button> <button id="Paper">PAPER</button>
+            <button id="Scissors">SCISSORS</button>
+        
+        </div>
+
+    </div>
     <div id="finalResult"></div>
         
 </body>

@@ -21,7 +21,8 @@ let playerSelection;
 function playRound(playerSelection, computerSelection) {
 
     if (playerScore < 5 && computerScore < 5) {
-        document.getElementById("choices").innerText = `${playerSelection} vs ${computerSelection}`;
+        document.getElementById("playerChoice").innerText = `${playerSelection}`;
+        document.getElementById("computerChoice").innerText = `${computerSelection}`;
 
         // tie
         if (playerSelection === computerSelection) {
@@ -60,9 +61,11 @@ function playRound(playerSelection, computerSelection) {
     };
 
     if (playerScore === 5) {
-        document.getElementById("finalResult").innerText = "YOU WON!"
+        document.getElementById("finalResult").innerText = "YOU WON!";
+        document.getElementById("finalResult").innerHTML += '<div class="newRound"><button onClick="window.location.reload();" style="background-color:#DEDAF4">Try again</button></div>'; 
     } else if (computerScore === 5) {
-        document.getElementById("finalResult").innerText = "GAME OVER"
+        document.getElementById("finalResult").innerText = "GAME OVER";
+        document.getElementById("finalResult").innerHTML += '<div class="newRound"><button onClick="window.location.reload();" style="background-color:#DEDAF4">Try again</button></div>'; 
     };
     
         document.getElementById("playerScore").innerText = `Player: ${playerScore}`;
